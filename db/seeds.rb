@@ -18,7 +18,7 @@ CSV.foreach(datafile, headers: true) do |row|
       hr.id = row[0]
       hr.title =  row[1]
       hr.description =  row[2]
-      hr.author = Author.where(email: "fakemail#{i}@mail.com").first_or_create(name: row[3], password_digest: "")
+      hr.author = Author.where(email: "fakemail#{i}@mail.com").first_or_create(name: row[3], password_digest: "test")
       hr.all_tags =  row[4]
       hr.created_at =  row[5]
       hr.updated_at =  row[6]
